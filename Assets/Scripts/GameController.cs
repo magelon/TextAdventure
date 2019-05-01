@@ -102,8 +102,5 @@ public class GameController : MonoBehaviour {
 		actionLog.Add (stringToAdd + "\n");
 	}
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }

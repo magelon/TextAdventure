@@ -50,7 +50,15 @@ public class GameController : MonoBehaviour {
 		roomNavigation.UnpackExitsInRoom ();
 	}
 
-	void ClearCollectionsForNewRoom()
+    void PrepareObjectsToTakeOrExamine(Room currentRoom)
+    {
+        for (int i = 0; i < currentRoom.interactableObjectsInRoom.Length; i++)
+        {
+
+        }
+    }
+
+    void ClearCollectionsForNewRoom()
 	{
 		interactionDescriptionsInRoom.Clear ();
 		roomNavigation.ClearExits ();

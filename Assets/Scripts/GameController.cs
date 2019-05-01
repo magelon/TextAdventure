@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour {
         {
             return verbDictionary[noun];
         }
-        return "You can't" + verb + " " + noun;
+        return "You can't " + verb + " " + noun;
 
     }
 

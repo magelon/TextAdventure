@@ -8,6 +8,7 @@ public class RoomNavigation : MonoBehaviour {
 
 
 	Dictionary<string, Room> exitDictionary = new Dictionary<string, Room> ();
+
 	GameController controller;
 
 	void Awake()

@@ -17,22 +17,26 @@ public class TextInput : MonoBehaviour
 
 	void AcceptStringInput(string userInput)
 	{
-		userInput = userInput.ToLower ();
-		controller.LogStringWithReturn (userInput);
+        if (userInput != null && userInput != "")
+        {
+            userInput = userInput.ToLower();
+            controller.LogStringWithReturn(userInput);
 
-		char[] delimiterCharacters = { ' ' };
-		string[] separatedInputWords = userInput.Split (delimiterCharacters);
+            char[] delimiterCharacters = { ' ' };
+            string[] separatedInputWords = userInput.Split(delimiterCharacters);
 
-		for (int i = 0; i < controller.inputActions.Length; i++) 
-		{
-			InputAction inputAction = controller.inputActions [i];
-			if (inputAction.keyWord == separatedInputWords [0]) 
-			{
-				inputAction.RespondToInput (controller, separatedInputWords);
-			}
-		}
+            for (int i = 0; i < controller.inputActions.Length; i++)
+            {
+                InputAction inputAction = controller.inputActions[i];
+                if (inputAction.keyWord == separatedInputWords[0])
+                {
+                    inputAction.RespondToInput(controller, separatedInputWords);
+                }
+            }
 
-		InputComplete ();
+            InputComplete();
+        }
+		
 
 	}
 
